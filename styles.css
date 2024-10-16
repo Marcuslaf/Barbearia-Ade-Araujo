@@ -1,0 +1,326 @@
+* {
+    font-family: Helvetica;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #87cefa;
+}
+
+/* Navigation Menu */
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 1000; 
+    text-align: right;
+    background-color: #111;
+    padding: 1em 0;
+}
+
+.menu .links {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.menu .links li a {
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu .links li a:hover {
+    background-color: #1e1e1e;
+}
+
+/* Header */
+header {
+    color: #fff;
+    text-align: center;
+
+}
+
+header h1 {
+    font-size: 3em;
+    margin-top: 1.5em;
+    margin-bottom: 0.3em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 7px;
+}
+
+/* Hero Section */
+.hero img {
+    margin-top: 0;
+}
+
+#galeria img {
+    width: 100%;
+    height: 200px; /* Define uma altura fixa */
+    object-fit: cover; /* Garante que as imagens sejam cortadas proporcionalmente para preencher a área */
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* Main Content */
+main {
+    padding: 2em 1em;
+}
+
+main section {
+    margin-bottom: 3em;
+}
+
+/* Serviços Section */
+#servicos {
+    background-color: #222;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin: 2em auto;
+    max-width: 1200px;
+}
+
+#servicos h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+#servicos ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+#servicos li {
+    flex: 1 1 200px;
+    background-color: #333;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    max-width: 250px;
+}
+
+#servicos li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+#servicos li img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+#servicos li p {
+    margin-top: 0.5em;
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+/* About Section */
+#sobre {
+    background-color: #111;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin: 2em auto;
+    max-width: 800px;
+}
+
+#sobre h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+/* Gallery Section */
+#galeria {
+    background-color: #222;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin: 2em auto;
+    max-width: 1200px;
+}
+
+#galeria h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Contact Section */
+#contato {
+    background-color: #111;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin: 2em auto;
+    max-width: 800px;
+}
+
+#contato h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+
+form input, form textarea, form button {
+    padding: 0.75em;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #222;
+    color: #fff;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #1e90ff;
+    outline: none;
+}
+
+form button {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #87cefa;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .menu .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        padding: 3em 1em;
+    }
+
+    main .gallery {
+        grid-template-columns: 1fr;
+    }
+}
